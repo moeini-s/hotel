@@ -1,0 +1,61 @@
+/* Footer ****************************************************************************/
+.footer{
+    background-color: $bg-purple1;
+    color: $text-purple;
+    /* Footer content--------------------------------------*/
+    &__content{
+        @include flexContainer;
+        color: $white;
+        @include respond-to(xsmall){
+            display: block;
+            text-align: center;
+        }
+        
+        &--section{
+            padding: 2rem 1rem;
+            flex:33.33%;
+            
+            > div{
+                margin-top: 1rem;
+                color: $text-purple;
+            }
+            a {
+                color: $text-purple;
+                text-decoration: none;
+                display: block;
+                
+                &:hover{
+                    padding-left: 0.5rem;
+                }
+            }
+            .socialNetwork{
+                display: inline-block;
+            }
+            .fa{
+                color: $white;
+                font-size: 2.4rem;
+                background-color: $orange;
+                border-radius: 50%;
+                padding: 1rem;
+                width: 5rem;
+                height: 5rem;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                margin: 1rem;
+                transition: transform 0.3s;
+                &:hover{
+                    transform: rotate(360deg);
+                }
+            }
+        }
+        &--copyright{
+            display: block;
+            flex: 100%;
+            width: 100%;
+            text-align: center;
+            padding: 1rem;
+        }
+    }
+    
+}
