@@ -1,0 +1,55 @@
+
+/* Header ****************************************************************************/
+.header{
+    background: linear-gradient(to bottom, $bg-purple1, $bg-purple2, transparent ), url('../images/hotel.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 60rem;
+    background-position: center;
+    color: $white;
+    padding: 1rem;
+    /*Header title--------------------------------------*/
+    &__title{
+        margin:10rem auto 2rem;
+        text-align: center;
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+    /*Header subtitle--------------------------------------*/
+    &__subtitle{
+        text-align: center;
+        position: relative;
+        width: 30rem;
+        margin:auto;
+        font-size: 2rem;
+        @include respond-to(small){
+            width: 100%;
+        }
+        &::before{
+            position: absolute;
+            content: "";
+            width: 18rem;
+            height: 0.5rem;
+            background-color:$orange;
+            left: -60%;
+            top:50%;
+            @include transform(translateY(-50%));
+            @include respond-to(small){
+                display: none;
+            }
+        }
+        &::after{
+            position: absolute;
+            content: "";
+            width: 18rem;
+            height: 0.5rem;
+            background-color:$orange;
+            right: -60%;
+            top:50%;
+            @include transform(translateY(-50%));
+            @include respond-to(small){
+                display: none;
+            }
+        }
+    }
+}
