@@ -10,9 +10,58 @@
         <link rel="stylesheet" href="./sass/style.css" type="text/css"/>
 		
     </head>
-	
-    <body>
-	
+	<body>
+<!--NavBar ***********************************************************************-->
+        <nav class="navbar">
+<!--NavBar logo-------------------------------------------------->
+            <div class="navbar__logo">
+                <img src="./images/logo.png" alt="chamran-hotel-logo"/>
+            </div>
+<!--NavBar Desktop-------------------------------------------------->           
+            <div class="navbar__desktop">
+                <a class="navbar__desktop--link" href="">Home</a>
+                <div class="navbar__desktop--link dropdown" href="">
+                    Rooms <i class="fa fa-angle-down"></i>
+                    <div class="dropdown__content">
+                        <a href="">Single Room</a>
+                        <a href="">Double Room</a>
+                        <a href="">Suite Room</a>
+                    </div>
+                </div>
+                <a class="navbar__desktop--link" href="#aboutus">AboutUs</a>
+                <a class="navbar__desktop--link"  href="#footer">ContactUs</a>
+            </div>
+<!--NavBar Mobile-------------------------------------------------->
+            <div class="navbar__mobile">
+                <span class="fa fa-bars" onclick="openSideNav()"></span>
+                <div class="navbar__mobile--sideNav" id="sideNav">
+                    <span class="fa fa-times" onclick="closeSideNav()"></span>
+                    <a class="link" href="">Home</a>
+                    <div class="link accodrionDropDown" href="">
+                        Rooms <i class="fa fa-angle-down"></i>
+                        <div class="accodrionDropDown__content">
+                            <a class="link" href="">Single Room</a>
+                            <a class="link" href="">Double Room</a>
+                            <a class="link" href="">Suite Room</a>
+                        </div>
+                    </div>
+                    <a class="link" href="#aboutus">AboutUs</a>
+                    <a class="link"  href="#footer">ContactUs</a>
+                </div>
+            </div>
+<!--NavBar Search-------------------------------------------------->
+            <div class="navbar__search">
+                <i class="fa fa-search" onclick="openSearchBox()"></i>
+                <div id="searchBox">
+                    <i class="fa fa-close" onclick="closeSearchBox()"></i>
+                    <form action="" method="get">
+                        <input type="text" name="keyword" placeholder="type then hit enter to search" autofocus/>
+                    </form>
+                </div>
+            </div>
+        </nav>
+		
+		
     <script src="./js/index.js"></script>
     </body>
 </html>
