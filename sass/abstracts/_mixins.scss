@@ -1,0 +1,43 @@
+@mixin clearfix{
+    &::after{
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+@mixin flexContainer {
+    max-width:100rem;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+  }
+  
+
+@mixin  respond-to($size) {
+	@if $size == large{
+        @media screen and (max-width:$large-bp){
+            @content;   
+        }
+    } 
+    @else if $size == medium{
+        @media screen and (max-width:$medium-bp){
+            @content;   
+        }
+    }
+    @if $size == small{
+        @media screen and (max-width:$small-bp){
+            @content;   
+        }
+    }
+    @else if $size == xsmall{
+        @media screen and (max-width:$xsmall-bp){
+            @content;   
+        }
+    } 
+	
+}

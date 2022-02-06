@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+    font-size: 62.5%; /* 1 rem = 16px -> 1 rem = 10 px  */
+    box-sizing: border-box;
+    @include respond-to(xsmall){
+        font-size: 56.25%; /* 1 rem = 16px -> 1 rem = 9 px */
+    }
+}
+@font-face {
+    font-family: Arial;
+    src: url(../fonts/Arial.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: ArialBold;
+    src: url(../fonts/ArialBold.woff);
+    font-style: normal;
+}
+body {
+    font-family: Arial;
+    font-size: 1.6rem;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: ArialBold;
+}
+
+
+
