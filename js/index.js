@@ -26,3 +26,17 @@ for (var i = 0; i < acc.length; i++) {
     }
   });
 }
+
+/* Facilities Tab-------------------------------------------------*/
+function openTab(event,id){
+  tablinks = document.getElementsByClassName("tab-link");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  let tabs=document.getElementsByClassName("tab-content");
+  for (i = 0; i < tabs.length; i++) {
+    tabs[i].style.display = "none";  
+  }
+  document.getElementById(id).style.display="flex";
+  event.currentTarget.className += " active";
+}

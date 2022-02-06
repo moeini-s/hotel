@@ -142,3 +142,61 @@
 
     }
 }
+/* Facilities ****************************************************************************/
+.facilities{
+    max-width: 100rem;
+    width: 95%;
+    margin: 8rem auto;
+    padding: 1rem;
+    border: 1px solid $light-gray;
+    border-radius: 0.5rem;
+    /* Facilities Header (tabs)--------------------------------------*/
+    &__header{
+        @include flexContainer;
+        margin-bottom: 2rem;
+        &--item{
+            flex:25%;
+            text-align: center;
+            color: $bg-purple2;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 2rem;
+            @include respond-to(xsmall){
+                flex:50%;
+            }
+            i,i::before,i::after{
+                display: block;
+                font-size: 3rem;
+            }
+        }
+        .active{
+            color: $orange;
+        }
+    }
+    /* Facilities content (tab-content)--------------------------------------*/
+    &__content{
+        @include flexContainer;
+        display: none;
+        > div{
+            flex:50%;
+            text-align: justify;
+            padding: 1rem;
+            @include respond-to(xsmall){
+                flex:100%;
+            }
+            > h3{
+                margin-bottom: 2rem;
+            }
+            p{
+                color: $darker-gray;
+            }
+            > img{
+                width:100%;
+                height: auto;
+            }
+        }
+    }
+    .default{
+        display: flex;
+    } 
+}
