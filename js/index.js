@@ -60,3 +60,21 @@ function showSlides(n) {
   if (n < 1) {slideIndex = slides.length}
   slides[slideIndex-1].style.display = "flex";  
 }
+
+/* Go to top -------------------------------------------------*/
+var goTopBtn = document.getElementById("goTop");
+window.onscroll = function() {
+  scrollFunction()
+};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    goTopBtn.style.display = "block";
+  } else {
+    goTopBtn.style.display = "none";
+  }
+}
+
+function goTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
