@@ -82,3 +82,63 @@
         }
     }
 }
+/* AboutUs ****************************************************************************/
+.aboutUs{
+    @include flexContainer;
+    margin: 8rem auto;
+    padding: 2rem;
+    @include respond-to(small){
+        display: block;
+    }
+    /*About Us text--------------------------------------*/
+    &__text{
+        flex:50%;
+        p{
+            text-align: justify;
+            margin: 2rem auto;
+            span{
+                color: $orange;
+            }
+        }
+    }
+    /* About Us pictures--------------------------------------*/
+    &__pictures{
+        flex:50%;
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        grid-gap: 1rem;
+        justify-content: center;
+        @include respond-to(xsmall){
+            display: block;
+        }
+        &--img{
+            overflow: hidden;
+            border-radius:0.5rem;
+            max-width: 20rem;
+            @include respond-to(xsmall){
+                margin: 1rem auto;
+            }
+            > img{
+                width: 100%;
+                height: auto;
+                transition: transform 0.5s;  
+                &:hover{
+                    @include transform(scale(1.2));
+                }
+            }
+        }
+        
+        &--img:nth-child(1){
+            grid-area: 1/1/2/2;
+        }
+        &--img:nth-child(2){
+            grid-area: 2/1/3/2;
+            
+        }
+        &--img:nth-child(3){
+            grid-area: 1/2/3/3;
+        }
+
+    }
+}
