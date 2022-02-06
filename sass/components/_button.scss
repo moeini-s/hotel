@@ -1,0 +1,13 @@
+.button-basic {
+    background-color: $orange;
+    color: $white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    height: 4rem;
+    width: 14rem;
+    cursor: pointer;
+    &:hover{
+        box-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,0.5);
+    }
+  }

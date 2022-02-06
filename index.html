@@ -65,7 +65,56 @@
             <h1 class="header__title"> Chamran Hotel, The Best Hotel In City!</h1>
             <h2 class="header__subtitle">Hotel and Restuarant</h2>
         </header>
-		
+<!--Booking ***********************************************************************-->
+        <section class="booking">
+            <form class="booking__form" action="" method="get">
+<!--Booking form input-------------------------------------------------->
+                <div class="booking__form--item">
+                    <label for="checkIn">Check in</label>
+                    <input type="date" name="checkIn" id="checkIn" required/>
+                </div>
+<!--Booking form input-------------------------------------------------->
+                <div class="booking__form--item">
+                    <label for="checkout">Check out</label>
+                    <input type="date" name="checkout" required/>
+                </div>
+<!--Booking form input-------------------------------------------------->
+                <div class="booking__form--item">
+                    <label for="adults">Adults</label>
+                    <select name="adults" id="adults" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+<!--Booking form input-------------------------------------------------->
+                <div class="booking__form--item">
+                    <label for="children">Children</label>
+                    <select name="children" id="children" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+<!--Booking form input-------------------------------------------------->                
+                <div class="booking__form--item">
+                    <label for="roomType">Room</label>
+                    <select name="roomType" id="roomType" required>
+                        <option value="single">Single Room</option>
+                        <option value="double">Double Room</option>
+                        <option value="suite">Suite Room</option>
+                    </select>
+                </div>
+<!--Booking form input-------------------------------------------------->               
+                <div class="booking__form--item">
+                    <input type="submit" value="Check Availability"/>
+                </div>
+            </form>
+        </section>
 		
     <script src="./js/index.js"></script>
     </body>
